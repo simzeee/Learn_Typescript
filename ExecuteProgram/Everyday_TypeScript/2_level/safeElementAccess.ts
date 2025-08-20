@@ -8,7 +8,7 @@ type successMessage<T> = {
   value: T
 }
 
-function elemAt<T>(arr: T[], index: number): errorMessage | successMessage<T> {
+function safeAccess<T>(arr: T[], index: number): errorMessage | successMessage<T> {
 
   // if arr is empty return failure obj
   if (arr.length === 0) {
